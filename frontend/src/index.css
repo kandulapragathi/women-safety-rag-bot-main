@@ -1,0 +1,1232 @@
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7fb;
+  color: #333;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   MAIN APP
+   ========================================= */
+
+.app {
+  min-height: 100vh;
+  background: #f7f7fb;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 40px;
+  background: linear-gradient(
+    135deg,
+    #7b2cbf,
+    #8e2de2
+  );
+  color: white;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-sos-button {
+  background: #ff1744;
+  color: white;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 23, 68, 0.4);
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  animation: pulse-border 2s infinite;
+  flex-shrink: 0;
+}
+
+.header-sos-button:hover {
+  background: #d50000;
+  transform: scale(1.05);
+}
+
+.shield {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 7px 0 0;
+  font-size: 17px;
+}
+
+
+/* =========================================
+   EMERGENCY CARD
+   ========================================= */
+
+.emergency-card {
+  display: flex;
+  gap: 22px;
+  margin: 26px 24px;
+  padding: 25px 28px;
+  background: #fff5f5;
+  border: 1px solid #ffcaca;
+  border-radius: 18px;
+}
+
+.emergency-icon {
+  font-size: 42px;
+  line-height: 1;
+  padding-top: 5px;
+}
+
+.emergency-content {
+  flex: 1;
+}
+
+.emergency-content h3 {
+  margin: 0 0 12px;
+  color: #c62828;
+  font-size: 24px;
+}
+
+.emergency-content p {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #444;
+}
+
+
+/* SOS Banner Trigger inside Emergency Card */
+.sos-banner-trigger {
+  width: 100%;
+  margin: 14px 0 16px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(183, 28, 28, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sos-banner-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 28, 28, 0.45);
+}
+
+.sos-banner-icon {
+  font-size: 26px;
+}
+
+.sos-banner-text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sos-banner-text strong {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.sos-banner-text small {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.sos-banner-arrow {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* =========================================
+   EMERGENCY NUMBERS
+   ========================================= */
+
+.emergency-numbers {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 5px;
+}
+
+.clickable-number {
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.clickable-number:hover {
+  background: #ffebee;
+  transform: scale(1.03);
+}
+
+.emergency-numbers div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.emergency-numbers span {
+  font-size: 14px;
+  color: #777;
+}
+
+.emergency-numbers strong {
+  font-size: 28px;
+  color: #c62828;
+}
+
+
+/* =========================================
+   EMERGENCY ACTION BUTTONS
+   ========================================= */
+
+.emergency-actions {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 1.2fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+
+/* Common button styling */
+
+.emergency-help-button,
+.hospital-help-button,
+.maps-help-button,
+.call-emergency-button {
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   POLICE STATION BUTTON
+   White background + red text
+   ========================================= */
+
+.emergency-help-button {
+  background: #ffffff;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  box-shadow: 0 3px 8px rgba(198, 40, 40, 0.08);
+}
+
+.emergency-help-button:hover {
+  background: #fff5f5;
+  color: #b71c1c;
+  border-color: #e57373;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(198, 40, 40, 0.15);
+}
+
+
+/* =========================================
+   HOSPITAL BUTTON
+   White background + black text
+   ========================================= */
+
+.hospital-help-button {
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hospital-help-button:hover {
+  background: #f7f7f7;
+  color: #111111;
+  border-color: #bdbdbd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+/* =========================================
+   NEARBY SUPPORT BUTTON
+   ========================================= */
+
+.maps-help-button {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #faf5ff
+  );
+
+  color: #6a1b9a;
+
+  border: 1px solid #ce93d8;
+
+  box-shadow:
+    0 3px 8px rgba(106, 27, 154, 0.08);
+}
+
+.maps-help-button:hover {
+  background: linear-gradient(
+    135deg,
+    #f8eaff,
+    #f3ddff
+  );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(106, 27, 154, 0.15);
+}
+
+
+/* =========================================
+   CALL EMERGENCY 112
+   ========================================= */
+
+.call-emergency-button {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #b71c1c,
+    #c62828
+  );
+
+  color: white;
+
+  border: 1px solid #a31515;
+
+  font-size: 15px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 12px rgba(183, 28, 28, 0.25);
+}
+
+.call-emergency-button:hover {
+  background: linear-gradient(
+    135deg,
+    #8e0000,
+    #b71c1c
+  );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(183, 28, 28, 0.3);
+}
+
+
+/* =========================================
+   DISABLED BUTTONS
+   ========================================= */
+
+.emergency-help-button:disabled,
+.hospital-help-button:disabled,
+.maps-help-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+   ========================================= */
+
+.welcome {
+  text-align: center;
+  padding: 28px 30px 20px;
+}
+
+.welcome h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: #222;
+}
+
+.welcome p {
+  margin: 0 auto 25px;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+
+/* =========================================
+   SUGGESTED QUESTIONS
+   ========================================= */
+
+.suggestions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.suggestions button {
+  padding: 12px 18px;
+  border-radius: 25px;
+
+  background: #faf3ff;
+
+  border: 1px solid #d8b4fe;
+
+  color: #6a1b9a;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.suggestions button:hover {
+  background: #f0ddff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(106, 27, 154, 0.12);
+}
+
+
+/* =========================================
+   CLEAR CHAT
+   ========================================= */
+
+.clear-chat-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 25px 0;
+}
+
+.clear-chat {
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.clear-chat:hover {
+  color: #c62828;
+}
+
+
+/* =========================================
+   CONVERSATION HISTORY
+   ========================================= */
+
+.chat-section {
+  padding: 0 25px;
+}
+
+.chat-history-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #5a189a;
+
+  padding: 12px 0;
+
+  margin-top: 10px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.chat-box {
+  min-height: 50px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 15px 5px;
+}
+
+.chat-section .chat-box {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* =========================================
+   MESSAGES
+   ========================================= */
+
+.message {
+  max-width: 78%;
+  margin-bottom: 18px;
+  padding: 14px 17px;
+  border-radius: 15px;
+  line-height: 1.5;
+}
+
+.user-message {
+  margin-left: auto;
+  background: #f0ddff;
+  border: 1px solid #d8b4fe;
+  color: #333;
+  border-bottom-right-radius: 4px;
+}
+
+.assistant-message {
+  margin-right: auto;
+  background: #f8f8fb;
+  border: 1px solid #e4e4e8;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+.message-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #5a189a;
+}
+
+.message-text {
+  font-size: 15px;
+}
+
+.message-text p {
+  margin: 5px 0;
+}
+
+.message-text ul,
+.message-text ol {
+  margin-top: 8px;
+  padding-left: 22px;
+}
+
+.message-text strong {
+  color: #4a148c;
+}
+
+.message-time {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+}
+
+
+/* =========================================
+   SOURCES
+   ========================================= */
+
+.sources {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.sources strong {
+  font-size: 12px;
+  color: #5a189a;
+}
+
+.source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 7px;
+}
+
+.source-card {
+  padding: 6px 9px;
+  background: #f3e8ff;
+  border: 1px solid #ddd0ed;
+  border-radius: 7px;
+  font-size: 11px;
+  color: #5a189a;
+}
+
+
+/* =========================================
+   LOADING ANIMATION
+   ========================================= */
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 0;
+}
+
+.loading span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7b2cbf;
+  animation: typing 1.2s infinite ease-in-out;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   INPUT AREA
+   ========================================= */
+
+.input-area {
+  display: flex;
+  gap: 10px;
+
+  padding: 18px 25px;
+
+  border-top: 1px solid #eeeeee;
+
+  background: white;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  padding: 14px 65px 14px 15px;
+
+  border: 1px solid #d6d6dd;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  background: #fafafa;
+}
+
+.input-wrapper input:focus {
+  border-color: #9c4dcc;
+
+  box-shadow:
+    0 0 0 3px rgba(123, 44, 191, 0.08);
+}
+
+.character-count {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 11px;
+
+  color: #999;
+
+  pointer-events: none;
+}
+
+.send-button {
+  min-width: 85px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #7b2cbf,
+    #8e2de2
+  );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.send-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(123, 44, 191, 0.25);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   PRIVACY FOOTER
+   ========================================= */
+
+.privacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 15px 20px 25px;
+
+  color: #888;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 18px 20px;
+  }
+
+  .shield {
+    font-size: 38px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .emergency-card {
+    margin: 18px 15px;
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .emergency-icon {
+    font-size: 34px;
+  }
+
+  .emergency-content h3 {
+    font-size: 21px;
+  }
+
+  .emergency-content p {
+    font-size: 15px;
+  }
+
+  .emergency-numbers {
+    gap: 35px;
+  }
+
+  .emergency-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-help-button,
+  .hospital-help-button,
+  .maps-help-button {
+    width: 100%;
+  }
+
+  .call-emergency-button {
+    width: 100%;
+  }
+
+  .welcome {
+    padding: 20px 15px;
+  }
+
+  .welcome h2 {
+    font-size: 25px;
+  }
+
+  .welcome p {
+    font-size: 15px;
+  }
+
+  .chat-section {
+    padding: 0 15px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .input-area {
+    padding: 14px 15px;
+  }
+
+  .privacy {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 450px) {
+
+  .header {
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .emergency-numbers {
+    gap: 25px;
+  }
+
+  .emergency-numbers strong {
+    font-size: 24px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .send-button {
+    min-height: 45px;
+  }
+}
+
+/* =========================================
+   FLOATING SOS BUTTON & ANIMATIONS
+   ========================================= */
+
+.floating-sos-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff1744, #c62828);
+  color: white;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.55);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-sos-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(211, 47, 47, 0.75);
+}
+
+.sos-btn-content {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sos-pulse-ring {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 23, 68, 0.65);
+  animation: sos-ring-pulse 2s infinite ease-out;
+}
+
+@keyframes sos-ring-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(255, 23, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 22px rgba(255, 23, 68, 0.85);
+  }
+}
+
+/* =========================================
+   EMERGENCY SOS MODAL
+   ========================================= */
+
+.sos-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: sosFadeIn 0.2s ease-out;
+}
+
+.sos-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  border: 2px solid #ffcdd2;
+  display: flex;
+  flex-direction: column;
+  animation: sosSlideUp 0.25s ease-out;
+}
+
+@keyframes sosFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sosSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.sos-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #b71c1c, #d32f2f);
+  color: white;
+}
+
+.sos-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sos-badge-icon {
+  font-size: 32px;
+}
+
+.sos-modal-title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sos-modal-title p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.sos-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.sos-modal-close:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.sos-modal-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sos-action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sos-group-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #757575;
+  letter-spacing: 0.6px;
+}
+
+.sos-call-grid,
+.sos-share-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sos-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.sos-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sos-action-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.sos-action-btn .btn-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.sos-action-btn strong {
+  display: block;
+  font-size: 14px;
+}
+
+.sos-action-btn small {
+  display: block;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.call-112 {
+  background: #ffebee;
+  color: #c62828;
+  border-color: #ffcdd2;
+}
+
+.call-181 {
+  background: #f3e5f5;
+  color: #6a1b9a;
+  border-color: #e1bee7;
+}
+
+.whatsapp-share {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border-color: #c8e6c9;
+}
+
+.sms-share {
+  background: #e1f5fe;
+  color: #01579b;
+  border-color: #b3e5fc;
+}
+
+.find-police {
+  background: #ede7f6;
+  color: #4527a0;
+  border-color: #d1c4e9;
+  width: 100%;
+}
+
+/* Siren Alarm Button */
+.sos-siren-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid #d32f2f;
+  background: #ffffff;
+  color: #d32f2f;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.sos-siren-btn .siren-icon {
+  font-size: 28px;
+}
+
+.sos-siren-btn strong {
+  display: block;
+  font-size: 14px;
+}
+
+.sos-siren-btn small {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+.sos-siren-btn.siren-active {
+  background: #d32f2f;
+  color: white;
+  animation: siren-flash 0.5s infinite alternate;
+}
+
+.sos-siren-btn.siren-active small {
+  color: #ffebee;
+}
+
+@keyframes siren-flash {
+  from {
+    background: #d32f2f;
+    box-shadow: 0 0 10px #d32f2f;
+  }
+  to {
+    background: #b71c1c;
+    box-shadow: 0 0 25px #ff1744;
+  }
+}
+
+.sos-modal-footer {
+  padding: 14px 24px 20px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sos-close-btn {
+  background: #f5f5f5;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.sos-close-btn:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .header-sos-button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+  .sos-call-grid,
+  .sos-share-grid {
+    grid-template-columns: 1fr;
+  }
+  .floating-sos-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,26 @@
+LEGAL INFORMATION AND SUPPORT GUIDANCE - INDIA
+
+Purpose:
+This document provides general information about using verified legal and support resources. It is not a substitute for advice from a qualified legal professional.
+
+Legal Information:
+Women who need legal assistance may seek help from appropriate legal services or qualified legal professionals.
+
+Free Legal Aid:
+Eligible persons may seek free legal services through the appropriate Legal Services Authorities.
+
+Safety and Documentation:
+If it is safe to do so, a person seeking assistance may keep relevant documents or evidence related to their situation. They should avoid putting themselves in additional danger to collect evidence.
+
+Privacy:
+Do not share unnecessary personal information, passwords, financial information, or identity documents with unknown persons or unverified services.
+
+Emergency Situations:
+If someone is in immediate danger, safety should be prioritized. Move to a safer location when possible and contact emergency services.
+
+Important Limitation:
+The chatbot must not invent laws, legal sections, legal procedures, court procedures, organizations, eligibility requirements, or contact numbers.
+
+If a user asks for specific legal advice or information that is not present in the knowledge base, the chatbot should clearly state that the requested information is not available in its current knowledge base.
+
+The chatbot should encourage users to consult an appropriate qualified legal professional or verified legal-service provider when specific legal advice is required.

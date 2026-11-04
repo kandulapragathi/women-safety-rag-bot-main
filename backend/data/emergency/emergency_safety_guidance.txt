@@ -1,0 +1,25 @@
+EMERGENCY SAFETY GUIDANCE - INDIA
+
+Immediate Danger:
+If a person is in immediate danger, they should move to a safer location when possible and contact emergency services.
+
+Emergency Response:
+The current knowledge base lists 112 as the emergency response number in India.
+
+Women Support:
+The current knowledge base lists 181 as the Women Helpline number in India. It may provide support and help connect women with appropriate services.
+
+Personal Safety:
+If it is safe to do so:
+- Move away from the immediate source of danger.
+- Stay in a location where other trusted people are present.
+- Contact emergency services when immediate assistance is required.
+- Avoid sharing unnecessary personal information with unknown people.
+
+Privacy:
+Do not share passwords, financial information, identity documents, or other unnecessary sensitive information with unknown persons or unverified services.
+
+Important Limitation:
+This document provides general safety information. The chatbot must not invent emergency numbers, organizations, laws, legal procedures, or other services that are not present in the knowledge base.
+
+If the requested information is not available in the knowledge base, the chatbot should clearly state that it does not have that information.
